@@ -3,67 +3,99 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
+  <body>
   <header class="main-header">
     <div class="main-header-logo">
       <a class="main-header-logo">
-        <img src="#" width="#" height="#" alt="логотип">
+        <img src="#" width="154" height="64" alt="логотип">
       </a>
     </div>
   	<nav class="main-navigation">
-  		<a class="main-header-logo">
-  			<img src="#" width="#" height="#" alt="логотип">
-  		</a>
   		<ul class="site-navigation">
   			<li>
-  				<a href="items.html">Каталог</a>
-  			</li>
+  				<a href="catalog.html">Каталог</a>
+        </li>
   			<li>
   				<a href="delivery.html">Доставка и оплата</a>
-  			</li>
+        </li>
   			<li>
   				<a href="about-us.html">О компании</a>
   			</li>
   		</ul>
   		<ul class="user-navigation">
+        <li>
+          <input type="search" name="search-request">
+        </li>
   			<li>
   				<a class="login-link" href="login.html">Вход</a>
   			</li>
   			<li class="basket">
-  				<a href="basket.html">Пусто</a>
+  				<a href="basket.html" aria-label="Корзина">Пусто</a>
   			</li>
   		</ul>
   		<div class="contact-information">
-  			<p class="open-hours"> С 10 до 20, ежедневно</p>
-  			<p class="contact-phone"> 8 812 450-25-25</p>
+  			<p class="open-hours"> С 10 до 20, ежедневно
+  			<span class="phone-number"> 8 812 450-25-25</span></p>
   		</div>
   	</nav>
   </header>
-  <body>
   	<main class="container">
-  		<h1 class="visually-hidden">Gllacy shop - продажа мороженного</h1>
-  		<section class="offer">
-  			<h2> Крем-брюле и пломбир с алиновым джемом </h2>
-  			 <!-- Здесь будет 3 кнопки слайдера и кнопка заказа -->
+  		<h1 class="visually-hidden">Gllacy shop - продажа мороженого</h1>
+  		<section class="special-offer">
+  			<!-- слайдер -->
+        <button class="button">Давайте оба!</button>
   		</section>
-
   		<section class="promo">
   			<h2 class="visually-hidden">Спец-предложения</h2>
   			<ul class="promo-list">
   				<li class="promo-item promo-raspberries">
   					<h3>Малинка даром!</h3>
   					<p>При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья беслатрно.</p>
-  					<span class="button">Хочу варенье!</span>
+  					<button class="button">Хочу варенье!</button>
   				</li>
   				<li class="promo-item promo-chocolate">
   					<h3>Шоколадки даром!</h3>
   					<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-  					<span class="button">Хочу шоколадки!</span> 
+  					<button class="button">Хочу шоколадки!</button> 
   				</li>
   			</ul>
   		</section>
-
-  		<section class="features">
+      <section class="gallery">
+        <h2 class="visually-hidden"> Сорта мороженого</h2>
+        <ul class="gallery-list">
+          <li class="gallery-item">
+            <img src="#" width="200" height="200" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <a href="#">
+              <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            </a>
+            <p class="item-price">310 <span class="weight">/кг</span></p>
+          </li>
+          <li class="gallery-item">
+            <img src="#" width="200" height="200" alt="Сливочно-кофейное с кусочками шоколада">
+            <a href="#">
+              <h3>Сливочно-кофейное с кусочками шоколада</h3>
+            </a>
+            <p class="item-price">380 <span class="weight">/кг</span></p>
+          </li>
+          <li class="gallery-item">
+            <img src="#" width="200" height="200" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <a href="#">
+              <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+            </a>
+            <p class="item-price">355 <span class="weight">/кг</span></p>
+          </li>
+          <li class="gallery-item">
+            <img src="#" width="200" height="200" alt="Сливочное крем-брюле с карамельной подливкой">
+            <a href="#">
+              <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+            </a>
+            <p class="item-price">415 <span class="weight">/кг</span></p>
+          </li>
+        </ul>
+      </section>
+      <section class="features">
   			<h2 class="visually-hidden"> Наши преимущества</h2>
   			<b class="features-main-character">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</b>
   			<ul class="features-list">
@@ -85,13 +117,13 @@
   		</section>
   		<article class="news-from-blog">
   			<h3>Новое в нашем блоге</h3>
-  			<a class="from-blog">10 способов сервировки фрукторвых щербетов к столу</a>
+  			<a class="from-blog" href="#">10 способов сервировки фрукторвых щербетов к столу</a>
   		</article>
   		<div class="subscribe-block">
   			<p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
   			<form class="subscribe-mail">
   				<input type="text" name="email" volume="Электронная почта">
-  				<span class="button subscribe-sent">Отправить</span>
+  				<button class="button" method="post">Отправить</button>
   			</form>	
   		</div>
   		<div class="contacts">
@@ -103,7 +135,7 @@
   				<p class="contacts-title"> Для заказов по телефону:</p>
   				<p class="contact-phone"> 8 812 450-25-25</p>
   				<p class="open-hours"> (с 10 до 20 ежедневно)</p>
-  				<span class="button" href="contact-form.html">Форма обратной связи</span>
+  				<a class="button" href="contact-form.html">Форма обратной связи</a>
   			</section>
   		</div>
   	</main>
@@ -152,7 +184,7 @@
     	<form class="modal modal-login-form">
     		<input type="text" name="email" volume="Электронная почта">
     		<input type="password" name="password" volume="Пароль">
-    	<span class="modal-login">Войти</span>	
+    	<button class="modal-login">Войти</button>	
     	</form>
    		<a class="modal-login-link" href="#">Забыли пароль?</a>
     	<a class="modal-login-link" href="#">Новая регистрация</a>
@@ -185,7 +217,7 @@
   				<td colspan="4">Итого: </td>
   			</tr>
   		</table>
-  		<span class="button order-button">Оформить заказ</span>
+  		<button class="button">Оформить заказ</button>
   	</section>
     
 
