@@ -1,0 +1,74 @@
+body {
+	padding: 0;
+	margin: 0;
+	width: 1200;
+	height: ;
+	font: Roboto;
+	font-size: 16px;
+	line-height: 18px;
+	background-color: 91a79b;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.main-navigation img{
+	width: 154px;
+	height: 64px;
+}
+
+.user-navigation {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.open-hours {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.contact-phone {
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: bold;
+}
+
+.offer h2 {
+	font-size: 60px;
+	line-height: 60px;
+}
+
+.promo-item h3 {
+	font-size: 35px;
+	line-height: 41px;
+}
+
+.promo-item p {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.gallery-item img {
+	width: 200px;
+	height:200px;
+}
+.gallery-item > h3 {
+	font-size: 16px;
+	line-height: 22px;
+
+}
+p .item-price {
+	font-size: 33px;
+	line-height: 45px;
+}
+
+span .weight {
+	font-size: 16px;
+}
