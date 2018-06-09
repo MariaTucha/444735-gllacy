@@ -122,12 +122,15 @@
   		<div class="subscribe-block">
   			<p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
   			<form class="subscribe-mail">
-  				<input type="text" name="email" volume="Электронная почта">
+          <label class="visually-hidden" for="subscribe-me">Адрес электронной почты</label>
+  				<input type="text" id="subscribe-me" name="email" pattern="Электронная почта">
   				<button class="button" method="post">Отправить</button>
   			</form>	
   		</div>
   		<div class="contacts">
-  			<figure class="contacts-map"></figure>
+  			<figure class="contacts-map">
+          <img src="img/map_pin.png" alt="Адрес главного офиса: Большая Конюшенная 19/8, Санкт-Петербург">   
+        </figure>
   			<section class="contact-info">
   				<h3 class="visually-hidden">Контакты</h3>
   				<p class="contacts-title"> Адрес главного офиса и офлайн-магазина: </p>
@@ -143,16 +146,16 @@
   		<div class="footer-social">
   			<ul>
   				<li class="sosial-button button-tw">
-  					<a href="#" class="button">Твитер</a>
+  					<a href="#" class="button">Твитер<img src="img/Твитер.png" width="32" height="32"></a>
   				</li>
   				<li class="sosial-button botton-insta">
-  					<a href="#" class="button">Инстаграм</a>
+  					<a href="#" class="button">Инстаграм <img src="img/Инста.png" width="32" height="32"></a>
   				</li>
   				<li class="sosial-button button-fb">
-  					<a href="#" type="button">Фейсбук</a>
+  					<a href="#" type="button">Фейсбук <img src="img/ФБ.png" width="32" height="32"></a>
   				</li>
   				<li class="sosial-button button-vk">
-  					<a href="#" type="button">ВКонтакте</a>
+  					<a href="#" type="button">ВКонтакте <img src="img/ВК.png" width="32" height="32"></a>
   				</li>
   			</ul>
   		</div>
@@ -174,7 +177,7 @@
   		</div>
 
   		<div class="copyright">
-  			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" width="108" height="39"></a>
+  			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.png" width="108" height="39"></a>
   			<p> Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright">HTML Academy</a> @copy; 2017</p>
   		</div>
   		
