@@ -1,13 +1,23 @@
 body {
 	padding: 0;
 	margin: 0;
+
 	width: 1200;
 	height: ;
-	font: Roboto;
+
+	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 18px;
-	background-color: 91a79b;
+
+	color: #ffffff;
+
+	background-color: #91a79b;
 }
+
+ul {
+	list-style: none;
+}
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -19,35 +29,117 @@ body {
 	overflow: hidden;
 }
 
+.container a:hover,
+.continer a:focus,
+footer a:hover,
+footer a:focus {
+	color: #e84d37;
+}
+
+.site-navigation a,
+.user-navigation a {
+	color: #ffffff;
+	text-decoration: none;
+	/* подчеркивание, наверно, border-bottom у блока*/
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+	background-image: url("../img/layer-white.jpg");
+	background-position: 0 0;
+
+	color: #333333;
+	text-decoration: none;
+}
+
+/* изменение состояния при нажатии делается на Java Script?*/
+
+.site-navigation a .current {
+	background-color: #d07058;
+
+}
+
 .main-navigation img{
 	width: 154px;
 	height: 64px;
 }
 
-.user-navigation {
+.user-navigation li {
+	background-color: #a1b4a9;
+}
+
+.user-navigation li.basket:hover,
+.user-navigation li.basket:focus,
+.user-navigation li.login-link:hover,
+.user-navigation li.login-link:focus {
+	background-color: #f8f7f4;
+}
+
+.user-navigation a.basket:hover,
+.user-navigation a.basket:focus,
+.user-navigation a.login-link:hover,
+.user-navigation a.login-link:focus {
+	color: #323232;
+}
+
+.main-header-container {
 	font-size: 14px;
 	line-height: 16px;
 }
 
-.open-hours {
-	font-size: 14px;
-	line-height: 16px;
-}
 
-.contact-phone {
+.contact-information .phone-number {
 	font-size: 22px;
 	line-height: 24px;
 	font-weight: bold;
 }
 
-.offer h2 {
+.special-offer h2 {
 	font-size: 60px;
-	line-height: 60px;
+	line-height: 60.35px;
+	font-weight: bold;
+}
+
+.special-offer .button {
+	font-size: 32px;
+	line-height: 44px;
+	font-weight: bold;
+}
+
+.special-offer .button,
+.promo-list a.button,
+.subscribe-mail button.subscribe-button,
+.contact-info a.button {
+
+	color: #ffffff;
+	
+	text-align: center;
+	vertical-align: center;
+
+	border: 0px;
+
+  	background-image: linear-gradient(to top, rgb(231,74,53), rgb(242,104,67));
+  	box-shadow: 0px 2px 2px 0px rgba(172,16,0,0.64);
+
+}
+
+.special-offer .button:hover,
+.special-offer .button:focus,
+.promo-list a.button:hover,
+.promo-list a.button:focus,
+.subscribe-mail button.subscribe-button:hover,
+.subscribe-mail button.subscribe-button:focus,
+.contact-info a.button:hover,
+.contact-info a.button:focus {
+  border: 0px;
+  background-image: linear-gradient(to top, rgb(241,125,101), rgb(241,125,101));
+  box-shadow: 0px 2px 2px 0px #ac1000;
 }
 
 .promo-item h3 {
 	font-size: 35px;
 	line-height: 41px;
+	font-weight: bold;
 }
 
 .promo-item p {
@@ -55,20 +147,187 @@ body {
 	line-height: 22px;
 }
 
-.gallery-item img {
-	width: 200px;
-	height:200px;
+.promo-list .promo-raspberries {
+	background-image: url("../img/raspberry-background.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
 }
-.gallery-item > h3 {
+
+.promo-list .promo-chocolate {
+	background-image: url("../img/chockolate-background.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.promo-list a.button {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+
+	text-align: center;
+	vertical-align: center;
+	text-decoration: none;
+
+	color: #ffffff;
+}
+
+.gallery-item img {
+	width: 266px;
+	height:267px;
+}
+.gallery-item a h3 {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.gallery-item a{
+  	color: #ffffff;
+}
+
+li.gallery-item:hover,
+li.gallery-item:focus {
+	background-color: #9bafa3;
+/*кнопка при наведении*/
+}
+
+.gallery-item p::after {
+	background-image: url("../img/hit.svg");
+	background-position: 0 0;
+	/*не вставляется ХИТ*/
+}
+
+p.item-price {
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: bold;
+  
+  color: rgb(255, 255, 255);
+  
+  text-align: left;
+  
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+p.item-price span {
+	font-size: 26px;
+}
+
+section.features {
+	line-height: 22px;
+
+	color: #000000;
+
+	background-image: url("../img/wafer-pattern.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+p.features-main-character {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+article.news-from-blog {
+	background-image: url("../img/strawberry-background.jpg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	color: #323232;
+}
+
+.news-from-blog h3 {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.news-from-blog a {
+	font-size: 24px;
+	line-height: 30px;
+
+	color: #323232;
+}
+
+.subscribe-block {
 	font-size: 16px;
 	line-height: 22px;
 
-}
-p .item-price {
-	font-size: 33px;
-	line-height: 45px;
+	color: #5a5a5a;
+
+	background-color: rgb(248,247,244);
+
+	border: 5px;
+	/*прописать градиент*/
 }
 
-span .weight {
+.subscribe-mail input[type="text"] {
 	font-size: 16px;
+	line-height: 24px;
+
+	color: #999999;
+}
+
+figure.contacts-map {
+
+}
+
+.contact-info {
+	color: #323232;
+
+	background-color: rgb(254,254,254);
+}
+
+.contact-info p.contacts {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.contact-info p.contacts-bold {
+	font-weight: bold;
+}
+
+.main-footer {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.footer-social a {
+	text-decoration: none;
+}
+
+.additional-information a {
+	color: #ffffff;
+}
+
+.copyright a {
+	color: #ffffff;
+}
+
+.modal {
+	background-color: #f8f7f4;
+}
+
+.modal-search,
+.modal-login {
+	font-size: 14px;
+	line-height: 24px;
+	color: #999999;
+}
+
+.breadcrumbs a {
+	font-size: 14px;
+	line-height: 16px;
+
+	color: #ffffff;
+}
+
+.filter-form .filter-item {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.filter-form .button {
+	color: #ffffff;
+
+	border: 2px solid #ffffff;
+	background-color: rgba(166, 183, 174, 0.19);
 }
