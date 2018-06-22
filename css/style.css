@@ -1,9 +1,11 @@
 body {
 	padding: 0;
+	padding-left: 10px;
 	margin: 0;
 
-	width: 1200;
-	height: ;
+	min-width: 900px;
+	max-width: 1200px;
+	min-height: 2431px;
 
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
@@ -15,7 +17,24 @@ body {
 }
 
 ul {
+	margin: 0;
+	padding: 0;
 	list-style: none;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+.button {
+	font: inherit;
+
+	text-align: center;
+	color: #ffffff;
+	vertical-align: middle;
+
+	border: none;
 }
 
 .visually-hidden {
@@ -27,6 +46,39 @@ ul {
 	padding: 0;
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+nav.main-navigation {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 200px;
+	margin-top: 10px;
+}
+
+ul.site-navigation {
+	display: flex;
+	justify-content: space-between;
+	width: 330px;
+	margin: 0;
+	padding: 0;
+}
+
+ul.user-navigation {
+	display: flex; 
+	justify-content: space-between;
+	width: 260px;
+	margin: 0;
+	padding: 0;
+
+	margin-bottom: 20px;
+}
+
+.user-navigation .search {
+	width: 35px;
+	height: 35px;
+	background-color: #b0c0b7;
+	border-radius: 50%;
 }
 
 .container a:hover,
@@ -52,11 +104,16 @@ footer a:focus {
 	text-decoration: none;
 }
 
-/* изменение состояния при нажатии делается на Java Script?*/
+/* изменение состояния при нажатии делается на active?*/
 
 .site-navigation a .current {
 	background-color: #d07058;
 
+}
+
+.main-header-logo {
+	position: absolute;
+	padding: 10px 10px;
 }
 
 .main-navigation img{
@@ -64,8 +121,36 @@ footer a:focus {
 	height: 64px;
 }
 
+.user-navigation .login-link,
+.user-navigation .basket {
+	display: block;
+
+	padding-top: 10px;
+	padding-right: 15px;
+
+	vertical-align: center;
+}
+
+.user-navigation .login-link {
+	width: 95px;
+}
+
+.user-navigation .basket {
+	width: 115px;
+}
+
 .user-navigation li {
+
+	text-align: right;
+	vertical-align: middle;
+
+	/* почему не происходит вертикального смещения текста? */
+
+	padding-right: 15px;
+
 	background-color: #a1b4a9;
+
+	border-radius: 20px;
 }
 
 .user-navigation li.basket:hover,
@@ -73,12 +158,14 @@ footer a:focus {
 .user-navigation li.login-link:hover,
 .user-navigation li.login-link:focus {
 	background-color: #f8f7f4;
+	vertical-align: middle;
 }
 
 .user-navigation a.basket:hover,
 .user-navigation a.basket:focus,
 .user-navigation a.login-link:hover,
 .user-navigation a.login-link:focus {
+	vertical-align: middle;
 	color: #323232;
 }
 
@@ -87,17 +174,55 @@ footer a:focus {
 	line-height: 16px;
 }
 
+.contact-information {
+	display: block;
+	position: absolute;
 
-.contact-information .phone-number {
+	text-align: right;
+
+	top: 73px;
+	right: 194px;
+
+	width: 170px;
+}
+
+.contact-information .open-hours {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.contact-information span.phone-number {
 	font-size: 22px;
 	line-height: 24px;
 	font-weight: bold;
 }
 
+.special-offer {
+	display: block;
+	height: 590px;
+
+	background-image: url("../img/icecream-white-stripes-8.png");
+	background-color: transparent;
+	background-position: 200px -50px;
+	background-repeat: no-repeat;
+}
+
 .special-offer h2 {
-	font-size: 60px;
+	font-size: 56px;
 	line-height: 60.35px;
-	font-weight: bold;
+	width: 620px;
+	padding: 0;
+	padding-left: 295px;
+	padding-top: 315px;
+	margin: 0;
+	text-align: center;
+	font-weight: normal;
+	word-wrap: break-word;
+}
+
+.button .small-button {
+	height: 44px;
+	border-radius: 20px;
 }
 
 .special-offer .button {
@@ -109,7 +234,13 @@ footer a:focus {
 .special-offer .button,
 .promo-list a.button,
 .subscribe-mail button.subscribe-button,
-.contact-info a.button {
+.contact-info a.button 
+.catalog .button {
+	font-size: 18px;
+	line-height: 24px;
+
+	padding: 10px;
+	margin-right: 20px;
 
 	color: #ffffff;
 	
@@ -118,13 +249,19 @@ footer a:focus {
 
 	border: 0px;
 
+
   	background-image: linear-gradient(to top, rgb(231,74,53), rgb(242,104,67));
   	box-shadow: 0px 2px 2px 0px rgba(172,16,0,0.64);
+  	border-radius: 20px;
+
+  	/* Прижать кнопки вправо */
 
 }
 
 .special-offer .button:hover,
 .special-offer .button:focus,
+.catalog .button:hover,
+.catalog .button:focus,
 .promo-list a.button:hover,
 .promo-list a.button:focus,
 .subscribe-mail button.subscribe-button:hover,
@@ -134,29 +271,63 @@ footer a:focus {
   border: 0px;
   background-image: linear-gradient(to top, rgb(241,125,101), rgb(241,125,101));
   box-shadow: 0px 2px 2px 0px #ac1000;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.container .promo {
+	margin-bottom: 40px;
+}
+
+ul.promo-list {
+	display: flex;
+	justify-content: space-between;
+
+	margin: 0;
+	padding: 0;
+
+	min-width: 516px;
 }
 
 .promo-item h3 {
 	font-size: 35px;
 	line-height: 41px;
 	font-weight: bold;
+
+	padding-left: 20px;
 }
 
 .promo-item p {
 	font-size: 18px;
 	line-height: 22px;
+
+	min-width: 515px;
+	padding-left: 20px;
+
 }
 
 .promo-list .promo-raspberries {
+	min-width: 420px;
+	max-width: 560px;
+	height: 230px;
 	background-image: url("../img/raspberry-background.jpg");
 	background-position: 0 0;
+	background-size: 100%;
 	background-repeat: no-repeat;
+	border-radius: 20px;
 }
 
 .promo-list .promo-chocolate {
+	min-width: 420px;
+	max-width: 560px;
+	height: 230px;
 	background-image: url("../img/chockolate-background.jpg");
 	background-position: 0 0;
+	background-size: 100%;
 	background-repeat: no-repeat;
+	border-radius: 20px;
 }
 
 .promo-list a.button {
@@ -171,32 +342,133 @@ footer a:focus {
 	color: #ffffff;
 }
 
-.gallery-item img {
-	width: 266px;
-	height:267px;
+ul.gallery-list {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
 }
-.gallery-item a h3 {
+
+li.gallery-item {
+	width: 267px;
+	text-align: center;
+
+	position: relative;
+	margin-right: 20px;
+}
+
+li.gallery-item:nth-child(4n) {
+	margin-right: 0px;
+}
+
+.gallery-item img {
+	display: block;
+	width: 267px;
+	height:267px;
+	margin-bottom: 19px;
+	border-radius: 50%;
+}
+
+
+.gallery-item h3 {
 	font-size: 16px;
 	line-height: 22px;
+
+	width: 265px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 40px;
 }
 
-.gallery-item a{
+.gallery-item a:not(.button){
   	color: #ffffff;
+  	text-decoration: none;
+  	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-li.gallery-item:hover,
-li.gallery-item:focus {
+a.gallery-item:hover,
+a.gallery-item:focus {
 	background-color: #9bafa3;
 /*кнопка при наведении*/
 }
 
-.gallery-item p::after {
-	background-image: url("../img/hit.svg");
-	background-position: 0 0;
-	/*не вставляется ХИТ*/
+.gallery .gallery-list,
+.gallery .gallery-list li,
+.gallery .gallery-list a {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.gallery-item .button {
+	display: block;
+	position: absolute;
+	content: "";
+	top: 339px;
+	width: 200px;
+	padding: 10px;
+	text-align: center;
+	background-image: linear-gradient(to top, rgb(231,74,53), rgb(242,104,67));
+  	box-shadow: 0px 2px 2px 0px rgba(172,16,0,0.64);
+  	border-radius: 20px;
+  	display: none;
+}
+
+.gallery-item:hover .cover {
+	display: flex;
+	justify-content: center;
+}
+
+.gallery-item:hover .button {
+	display: block;
+	width: 200px;
+	z-index: 1;
+}
+
+.gallery-list .gallery-item::before {
+	display: block;
+	content: "";
+
+	position: absolute;
+	left: -13px;
+	top: -6px;
+	width: 293px;
+	height: 320px;
+
+	padding-bottom: 77px;
+
+	background-color: rgba(255,255,5255,0.3);
+	border-radius: 5px;
+	z-index: 0; 
+  	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  	display: none;
+  	 /* Нижняя мороженка наезжает на фон */
+}
+
+.gallery-list .gallery-item:hover::before {
+	display: block;
+	z-index: -1;
+}
+
+.gallery-list .hit::after {
+	display: block;
+	width: 61px;
+	height: 61px;
+	border-radius: 50%;
+	z-index: 2;
+	background-image: url("../img/hit.jpg");
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
 }
 
 p.item-price {
+	display: block;
+	position: absolute;
+	top: 215px;
+	left: 0;
+	content: "";
+
   font-size: 40px;
   line-height: 45px;
   font-weight: bold;
@@ -213,24 +485,65 @@ p.item-price span {
 }
 
 section.features {
+	margin-bottom: 40px; 
 	line-height: 22px;
 
 	color: #000000;
 
 	background-image: url("../img/wafer-pattern.jpg");
 	background-position: 0 0;
+	background-size: 100%;
 	background-repeat: no-repeat;
+	border-radius: 13px;
+}
+
+ul.features-list {
+	padding: 0;
+	margin: 0;
+	padding-bottom: 30px;
 }
 
 p.features-main-character {
+	padding-top: 30px;
+	padding-left: 20px;
 	font-size: 24px;
 	line-height: 30px;
+	font-weight: bold;
+}
+
+div.features-list-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+li.feature-item {
+	width: 500px;
+	padding-right: 35px;
+}
+
+.feature-item p {
+	padding-left: 75px;
+}
+
+div.subscribe-wrap {
+	display: flex;
+	justify-content: space-between;
+	height: 220px;
 }
 
 article.news-from-blog {
+	min-width: 420px;
+	max-width: 560px;
+
 	background-image: url("../img/strawberry-background.jpg");
 	background-position: 0 0;
 	background-repeat: no-repeat;
+	background-size: 100%;
+
+	/* Картинку надо как-то сжать в размер */
+
+	border-radius: 20px;
 
 	color: #323232;
 }
@@ -238,16 +551,31 @@ article.news-from-blog {
 .news-from-blog h3 {
 	font-size: 16px;
 	line-height: 22px;
+	font-weight: normal;
+
+	word-wrap: wrap;
+
+	padding-left: 20px;
 }
 
 .news-from-blog a {
 	font-size: 24px;
 	line-height: 30px;
+	font-weight: bold;
+
+	width: 290px;
+
+	padding-left: 20px;
+	word-wrap: wrap;
 
 	color: #323232;
+	/* Как вставить отступ второй строки от края блока? */
 }
 
 .subscribe-block {
+	min-width: 420px;
+	max-width: 560px;
+
 	font-size: 16px;
 	line-height: 22px;
 
@@ -255,25 +583,66 @@ article.news-from-blog {
 
 	background-color: rgb(248,247,244);
 
+	border-radius: 13px;
 	border: 5px;
 	/*прописать градиент*/
+}
+
+.subscribe-block p {
+	padding: 20px;
+	text-align: justify;
+	margin-bottom: 40px;
+}
+
+.subscribe-mail {
+	display: flex;
+	padding-left: 20px;
+	/* отрегулировать размер поля ввода */
 }
 
 .subscribe-mail input[type="text"] {
 	font-size: 16px;
 	line-height: 24px;
 
+	height: 44px;
+	text-align: left;
+	vertical-align: middle;
+
+	border: 1px solid #999999;
+	border-radius: 5px;
+
 	color: #999999;
 }
 
-figure.contacts-map {
+figure.contacts-map img{
+	width: 1200px;
+	height: 430px;
+
+	margin: 0px;
+	padding: 0;
+
+	/* надо растянуть на всю ширину блока */
 
 }
 
 .contact-info {
+	display: block;
+
+	width: 300px;
+	height: 308px;
+
 	color: #323232;
 
 	background-color: rgb(254,254,254);
+	border-radius: 20px;
+}
+
+.contact-info p {
+	padding-left: 20px;
+}
+
+.contact-info p.contacts-first-line {
+	padding-top: 30px;
 }
 
 .contact-info p.contacts {
@@ -285,13 +654,84 @@ figure.contacts-map {
 	font-weight: bold;
 }
 
+.contact-info .button {
+	display: block;
+	padding-bottom: 30px;
+	margin-top: 20px;
+	margin-left: 25px;
+	margin-right: 25px;
+
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
 .main-footer {
 	font-size: 13px;
 	line-height: 18px;
+
+	margin-top: 38px;
+	margin-left: 20px;
+
+	display: flex;
+	justify-content: space-between;
+
+	border-top: 1px solid #ffffff;
+	padding-top: 25px;
+}
+
+ul.footer-social {
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+
+	/* почему-то к нему прилепает соседний флекс-блок */
+}
+
+.footer-social li {
+	width: 40px;
+	height: 40px;
 }
 
 .footer-social a {
+	font-size: 0px;
+	margin: -1px;
+	padding: 0;
 	text-decoration: none;
+
+	background-color: #e6ebe9;
+	border-radius: 50%;
+}
+
+ul.footer-links {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	width: 310px;
+}
+
+.footer-links .factory {
+	order: 3;
+}
+
+.footer-links .documentation {
+	order: 2;
+}
+
+.footer-links .standarts {
+	order: 4;
+}
+
+.footer-links .current {
+	font-weight: bold;
+}
+
+.copyright {
+	width: 220px;
+	margin-left: auto;
+	padding: 0;
 }
 
 .additional-information a {
@@ -313,21 +753,149 @@ figure.contacts-map {
 	color: #999999;
 }
 
-.breadcrumbs a {
+.inner-page .breadcrumbs {
+	display: flex;
+	justify-content: space-between;
+
+	width: 230px;
+}
+
+.inner-page ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.inner-page input[type="checkbox"] {
+	list-style: none;
+}
+
+.inner-page .breadcrumbs li {
+	margin-right: 20px;
+}
+
+.inner-page .breadcrumbs a {
 	font-size: 14px;
 	line-height: 16px;
+
+	display: block;
 
 	color: #ffffff;
 }
 
-.filter-form .filter-item {
+.inner-page .catalog-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	margin: 0;
+	padding: 0;
+}
+
+.inner-page .catalog-list li,
+.catalog-list a,
+.catalog-list p {
+	margin: 0;
+	padding: 0;
+}
+
+a.button+.item-button {
+	display: none;
+}
+
+.inner-page .pagination {
+	display: block;
+	width: 190px;
+
+	/* сдвинуть блок вправо*/
+}
+
+.inner-page .pagination-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pagination-list li {
+	width: 27px;
+	height: 27px;
+}
+
+.pagination-list a {
+	font-size: 16px;
+	line-height: 18px;
+
+	width: 27px;
+	height: 27px;
+
+	color: #ffffff;
+
+	text-decoration: none;
+}
+
+.pagination-list a.current {
+	color: #999999;
+	background-color: #ffffff;
+
+	border-radius: 50%;
+}
+
+.catalog-list {
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+}
+
+.catalog-list .gallery-item {
+	width: 270px;
+}
+
+.catalog-list h3 {
+	font-weight: normal;
+}
+
+.inner-page .filter-form {
+	display: flex;
+	justify-content: strenth;
+	flex-wrap: wrap;
+
+	width: 880px;
+}
+
+.filter-form .sorting,
+.filter-form .filter-pricing,
+.filter-form .fats-container,
+.filter-form .topping-container {
+	display: flex;
+}
+
+.filter-form .sorting {
+	width: 195px;
+	margin-right: 15px;
+	flex-direction: column;
+}
+
+.filter-form .filter-pricing {
+	width: 220px;
+	margin-right: 15px;
+}
+
+.fats .fats-container {
+	flex-wrap: wrap;
 	font-size: 14px;
+	width: 400px;
+}
+
+.inner-page .filter-form .filter-item {
+	font-size: 14px;
+	width: 700px;
 	line-height: 16px;
 }
 
-.filter-form .button {
+.inner-page .filter-form .button {
 	color: #ffffff;
 
 	border: 2px solid #ffffff;
 	background-color: rgba(166, 183, 174, 0.19);
 }
+
+

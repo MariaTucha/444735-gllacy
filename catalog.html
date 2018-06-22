@@ -27,20 +27,23 @@
   			</li>
   		</ul>
   		<ul class="user-navigation">
-  			<li class="login-link">
-  				<a class="login-link" href="login.html">Вход</a>
-  			</li>
-  			<li class="basket">
-  				<a class="basket" href="basket.html">2 товара</a>
-  			</li>
+  			<li class="search"> <!-- Должно всплывать при наведении
+          <input type="search" name="search-request"> -->
+         </li>
+         <li class="login-link">
+          <a class="login-link" href="login.html">Вход</a>
+         </li>
+         <li class="basket">
+          <a class="basket" href="basket.html" aria-label="Корзина">Пусто</a>
+         </li>
   		</ul>
-  		<div class="contact-information">
-  			<p class="open-hours"> С 10 до 20, ежедневно<span>
-  			 8 812 450-25-25 </span></p>
-  		</div>
   	</nav>
+    <div class="contact-information">
+        <p class="open-hours"> С 10 до 20, ежедневно <br><span class="phone-number">
+         8 812 450-25-25 </span></p>
+      </div>
     </header>
-    <main class="container">
+    <main class="inner-page">
     <ul class="breadcrumbs">
       <li>
         <a href="index.html">Главная</a>
@@ -56,23 +59,20 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтры выбора сливочного мороженого</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <p class="sorting">
+          <div class="sorting">
             <label class="filter-item" for="filter-sort">Сортировка:</label>
             <select class="filter-sorting" id="filter-sort" name="sorting-filter">
               <option>По популярности</option>
             </select>
-          </p>
-          <p class="filter-pricing">
-            <label class="filter-item" for="filter-price">Цена:</label>
+          </div>
+          <div class="filter-pricing">
+            <label class="filter-price" for="filter-price">Цена:</label>
           <!--Как разметить 100 - 500, это ж выбранный диапазон значений -->
-            <output name="range"></output>
             <input type="range" name="filter-price" id="filter-price">
-          </p>
-        </fieldset>
-        <fieldset>
+          </div>
+        <div class="fats">
           <legend class="filter-item">Жирность:</legend>
-          <ul>
+          <ul fats-container>
             <li>
               <input type="radio" id="fat-group" name="fat-zero" value="0">
               <label for="fat-group">0% </label>
@@ -90,10 +90,10 @@
               <label for="fat-group">выше 30%</label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset>
+        </div>
+        <div class="topping">
          <legend class="filter-item">Наполнители:</legend>
-         <ul>
+         <ul class="topping-container">
            <li>
              <input type="checkbox" name="filter-chockolate" id="select-chockolate" checked>
              <label for="select-chockolate">шоколадные</label>
@@ -115,13 +115,13 @@
              <label for="select-jam">джемы</label>
            </li>
          </ul>
-        </fieldset>
+        </div>
         <button class="button" type="submit">Применить</button>
       </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Список видов сливочного мороженого</h2>
-      <ul class="catalog-list">
+      <ul class="catalog-list gallery-list">
         <li class="gallery-item">
           <a href="catalog-item.html">
             <img src="img/1.1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -131,6 +131,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a></p>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -140,6 +141,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -150,6 +152,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -160,6 +163,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -169,6 +173,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочное с брусничным джемом </a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -178,6 +183,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочно-черничное с цельными ягодами черники</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -187,6 +193,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочно-лимонное с карамельной присыпкой</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -196,6 +203,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочное с шоколадной стружкой</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -205,6 +213,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочно-ванильное с кусочками шоколада</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -214,6 +223,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочное с ментоловым сиропом</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -223,6 +233,7 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочное с кусочками черного шоколада</a>
           </h3>
+          <p class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a>
         </li>
         <li class="gallery-item">
           <a href="catalog-item.html">
@@ -232,13 +243,14 @@
           <h3 class="catalog-item-name">
             <a href="catalog-item.html">Сливочное с мятным сиропом</a>
           </h3>
+          <div class="cover"><a class="button item-button" htef="#" alt="кнопка просмотра" width="200px">Быстрый просмотр</a></div>
         </li>
       </ul>
       <div class="pagination">
         <a class="button page-before-button" aria-label="Кнопка предыдущей страницы"> </a>
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a href="#">1</a>
+            <a class="current" href="#">1</a>
           </li>
           <li class="pagination-item pagination-item-current">
             <a href="#">2</a>
@@ -258,17 +270,17 @@
     </section>
     <footer class="main-footer">
       <div class="footer-social">
-        <ul>
-          <li class="sosial-button button-tw">
+        <ul class="footer-social">
+          <li class="social-button button-tw">
             <a href="#" class="button">Твитер<img src="img/twiter.png" width="32" height="32"></a>
           </li>
-          <li class="sosial-button botton-insta">
+          <li class="social-button botton-insta">
             <a href="#" class="button">Инстаграм <img src="img/insta.png" width="32" height="32"></a>
           </li>
-          <li class="sosial-button button-fb">
+          <li class="social-button button-fb">
             <a href="#" type="button">Фейсбук <img src="img/fb.png" width="32" height="32"></a>
           </li>
-          <li class="sosial-button button-vk">
+          <li class="social-button button-vk">
             <a href="#" type="button">ВКонтакте <img src="img/vk.png" width="32" height="32"></a>
           </li>
         </ul>
