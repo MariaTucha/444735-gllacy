@@ -4,9 +4,6 @@ body {
 	padding: 0;
 	margin: 0;
 
-	min-width: 900px;
-	max-width: 1200px;
-
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 18px;
@@ -14,6 +11,13 @@ body {
 	color: #ffffff;
 
 	background-color: #849d8f;
+}
+
+.site-cover {
+	min-width: 900px;
+	max-width: 1200px;
+
+	margin: 0 auto;
 }
 
 ul {
@@ -1282,11 +1286,14 @@ ul.footer-links {
 	margin-right: 5px;
 }
 
-.fats .fats-container-1 {
+.fats .fats-container {
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
-	max-width: 420px;
+	max-width: 500px;
+}
+
+.fats-container li {
+	min-width: 55px;
 }
 
 .filter-form .topping {
