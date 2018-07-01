@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="site-cover">
+      <div class="slider-picture">
   <header class="main-header">
       <div class="main-header-logo">
         <a class="main-header-logo">
@@ -69,10 +70,27 @@
   	<main class="container main-page">
   		<h1 class="visually-hidden">Gllacy shop - продажа мороженого</h1>
   		<section class="special-offer">
-        <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-  			<!-- слайдер -->
+        <h2 class="first-slide">Крем-брюле и пломбир с малиновым джемом</h2>
+        <h2 class="second-slide">Шоколадный пломбир и лимонный сорбет</h2>
+        <h2 class="third-slide">Пломбир с помадкой и клубничный щербет</h2>
         <a class="button big-btn" href="#">Давайте оба!</a>
   		</section> 
+      <div class="pagination">
+          <ul class="main-page-slider">
+            <li>
+              <label for="slide-1" class="visually-hidden">Крем-брюле и пломбир с малиновым джемом</label>
+              <input type="radio" name="slide-1" id="slide-1" checked>
+            </li>
+            <li>
+              <label for="slide-2" class="visually-hidden">Шоколадный пломбир и лимонный сорбет</label>
+              <input type="radio" name="slide-2" id="slide-2">
+            </li>
+            <li>
+              <label for="slide-3" class="visually-hidden">Пломбир с помадкой и клубничный щербет</label>
+              <input type="radio" name="slide-3" id="slide-3">
+            </li>
+          </ul>
+      </div>
   		<section class="promo">
   			<h2 class="visually-hidden">Спец-предложения</h2>
   			<ul class="promo-list">
@@ -88,6 +106,7 @@
   				</li>
   			</ul>
   		</section>
+    </div>
       <section class="gallery-catalog">
         <h2 class="visually-hidden"> Сорта мороженого</h2>
         <ul class="gallery-list">
@@ -178,6 +197,8 @@
   			</section>
   		</div>
   	</main>
+  </div>
+  <div class="site-cover">
   	<footer class="main-footer">
   		<div class="footer-social">
   			<ul class="footer-social">
@@ -218,6 +239,8 @@
   		</div>
   		
   	</footer>
+
+  </div>
     <section class="modal modal-catalog">
       <h2 class="visually-hidden">Каталог мороженого</h2>
       <form>
@@ -232,28 +255,27 @@
         </select>
       </form>
     </section>
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск по сайту</h2>
-      <form class="modal modal-search-form">
-        <label class="visually-hidden" for="modal-search">Поиск по сайту</label>
-        <input type="text" name="search-request" placeholder="Что ищем?" id="modal-search">
-      </form>
     </section>
   	<section class="modal modal-login">
-    	<h2>Личный кабинет</h2>
+    	<h2 class="visually-hidden">Личный кабинет</h2>
     	<form class="modal modal-login-form">
-        <p>
+        <div>
           <label class="visually-hidden" for="login-icon-user">Электронная почта</label>
     		  <input type="text" name="email" placeholder="Электронная почта" id="login-icon-user">
-        </p>
-        <p>
+        </div>
+        <div>
           <label class="visually-hidden" for="login-icon-password">Пароль</label>
     		  <input type="password" name="password" placeholder="Пароль" id="login-icon-password">
-        </p>
-    	<button class="modal-login" type="">Войти</button>	
+        </div>
+        <div class="login-cover">
+    	   <button class="button modal-login" type="">Войти</button>	
+         <div class="modal-cover">
+           <a class="modal-login-link" href="#">Забыли пароль?</a>
+           <a class="modal-login-link" href="#">Новая регистрация</a>
+         </div>
+        </div>
+      </div>
     	</form>
-   		<a class="modal-login-link" href="#">Забыли пароль?</a>
-    	<a class="modal-login-link" href="#">Новая регистрация</a>
   	</section>
 </div>
   </body>

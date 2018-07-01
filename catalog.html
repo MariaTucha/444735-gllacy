@@ -8,6 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="site-cover">
   <header class="main-header">
       <div class="main-header-logo">
         <a class="main-header-logo">
@@ -65,6 +66,8 @@
         <span class="phone-number"> 8 812 450-25-25</span></p>
       </div>
     </header>
+  </div>
+  <div class="site-cover">
     <main class="inner-page">
     <ul class="breadcrumbs">
       <li>
@@ -81,64 +84,69 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтры выбора сливочного мороженого</h2>
       <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-          <div class="sorting">
+          <div class="filter-item sorting">
             <label class="filter-item" for="filter-sort">Сортировка:</label>
-            <select class="filter-sorting" id="filter-sort" name="sorting-filter">
-              <option>По популярности</option>
-            </select>
+            <div class="container">
+              <select class="filter-sorting" id="filter-sort" name="sorting-filter">
+                <option>По популярности</option>
+              </select>
           </div>
-          <div class="filter-pricing">
-            <label class="filter-price" for="filter-price">Цена:</label>
-          <!--Как разметить 100 - 500, это ж выбранный диапазон значений -->
-            <input type="range" name="filter-price" id="filter-price">
           </div>
-          <div class="fats">
+          <div class="filter-item filter-pricing">
+            <label class="filter-price" for="#">Цена:</label>
+            <div class="container">
+              <span>1</span>
+            </div>
+          </div>
+          <div class="filter-item fats">
             <legend class="filter-item">Жирность:</legend>
-            <ul fats-container>
-              <li>
-                <input type="radio" id="fat-group" name="fat-zero" value="0">
-                <label for="fat-group"> 0% </label>
-              </li>
-              <li>
-                <input type="radio" id="fat-group" name="fat-10" value="10" checked>
-                <label for="fat-group">до 10%</label>
-              </li>
-              <li>
-                <input type="radio" id="fat-group" name="fat-30" value="30">
-                <label for="fat-group">до 30%</label>
-              </li>
-              <li>
-                <input type="radio" id="fat-group" name="fat-zero" value="over-30">
-                <label for="fat-group">выше 30%</label>
-              </li>
-            </ul>
+              <ul class="container fats-container">
+                <li>
+                  <input type="radio" id="fat-group" name="fat-zero" value="0">
+                  <label for="fat-group"> 0% </label>
+                </li>
+                <li>
+                  <input type="radio" id="fat-group" name="fat-10" value="10" checked>
+                  <label for="fat-group">до 10%</label>
+                </li>
+                <li>
+                  <input type="radio" id="fat-group" name="fat-30" value="30">
+                  <label for="fat-group">до 30%</label>
+                </li>
+                <li>
+                  <input type="radio" id="fat-group" name="fat-zero" value="over-30">
+                  <label for="fat-group">выше 30%</label>
+                </li>
+              </ul>
           </div>
-        <div class="topping">
+        <div class="filter-item topping">
          <legend class="filter-item">Наполнители:</legend>
-         <ul class="topping-container">
-           <li>
-             <input type="checkbox" name="filter-chockolate" id="select-chockolate" checked>
-             <label for="select-chockolate">шоколадные</label>
-           </li>
-           <li>
-             <input type="checkbox" name="filter-sugar" id="select-sugar" checked>
-             <label for="select-sugar">сахарные присыпки</label>
-           </li>
-           <li>
-             <input type="checkbox" name="filter-fruits" id="select-fruits">
-             <label for="select-fruits">фрукты</label>
-           </li>
-           <li>
-             <input type="checkbox" name="filter-syrop" id="select-syrop">
-             <label for="select-syrop">сиропы</label>
-           </li>
-           <li>
-             <input type="checkbox" name="filter-jam" id="select-jam">
-             <label for="select-jam">джемы</label>
-           </li>
-         </ul>
+
+           <ul class="container topping-container">
+             <li>
+               <input type="checkbox" name="filter-chockolate" id="select-chockolate" checked>
+               <label for="select-chockolate">шоколадные</label>
+             </li>
+             <li>
+               <input type="checkbox" name="filter-sugar" id="select-sugar" checked>
+               <label for="select-sugar">сахарные присыпки</label>
+             </li>
+             <li>
+               <input type="checkbox" name="filter-fruits" id="select-fruits">
+               <label for="select-fruits">фрукты</label>
+             </li>
+             <li>
+               <input type="checkbox" name="filter-syrop" id="select-syrop">
+               <label for="select-syrop">сиропы</label>
+             </li>
+             <li>
+               <input type="checkbox" name="filter-jam" id="select-jam">
+               <label for="select-jam">джемы</label>
+             </li>
+           </ul>
+         
         </div>
-        <button class="button-white" type="submit">Применить</button>
+        <a href="#" class="button-white" type="submit">Применить</a>
       </form>
     </section>
     <section class="catalog">
@@ -269,8 +277,10 @@
         </li>
       </ul>
       <div class="pagination">
-        <a class="button page-before-button" aria-label="Кнопка предыдущей страницы"> </a>
         <ul class="pagination-list">
+          <li class="pagination-item"> 
+            <a class="page-before" aria-label="Кнопка предыдущей страницы"> </a>
+          </li>
           <li class="pagination-item">
             <a class="current" href="#">1</a>
           </li>
@@ -286,10 +296,15 @@
           <li class="pagination-item">
             <a href="#">5</a>
           </li>
+          <li class="pagination-item"> 
+            <a class="next-page"></a>
+          </li>
         </ul>
-        <a class="button next-page-button"></a>
       </div>
     </section>
+  </main>
+</div>
+<div class="site-cover">
     <footer class="main-footer">
       <div class="footer-social">
         <ul class="footer-social">
@@ -328,71 +343,54 @@
         <p> Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright">HTML Academy</a> @copy; 2017</p>
       </div>
     </footer>
-
-
-    <section class="modal modal-catalog">
-      <h2 class="visually-hidden">Каталог мороженого</h2>
-      <form>
-        <label for="icecream-type">Новинки</label>
-        <select name="select-type">
-          <optgroup label="Новинки">
-            <option>Сливочное</option>
-            <option>Щербеты</option>
-            <option>Фруктовый лед</option>
-            <option>Мелорин</option>
-          </optgroup>
-        </select>
-      </form>
-    </section>
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск по сайту</h2>
-      <form class="modal modal-search-form">
-        <label class="visually-hidden" for="modal-search">Поиск по сайту</label>
-        <input type="text" name="search-request" placeholder="Что ищем?" id="modal-search">
-      </form>
-    </section>
+  </div>
     <section class="modal modal-login">
       <h2 class="visually-hidden">Личный кабинет</h2>
       <form class="modal modal-login-form">
-        <div class="modal-wrap">
+        <div>
           <label class="visually-hidden" for="login-icon-user">Электронная почта</label>
           <input type="text" name="email" placeholder="Электронная почта" id="login-icon-user">
         </div>
-        <div class="modal-wrap">
+        <div>
           <label class="visually-hidden" for="login-icon-password">Пароль</label>
           <input type="password" name="password" placeholder="Пароль" id="login-icon-password">
         </div>
-        <div class="modal-wrap">
-      <button class="modal-login-button" type="">Войти</button>  </div>
+        <div class="login-cover">
+         <button class="button modal-login" type="">Войти</button>  
+         <div class="modal-cover">
+           <a class="modal-login-link" href="#">Забыли пароль?</a>
+           <a class="modal-login-link" href="#">Новая регистрация</a>
+         </div>
+        </div>
+      </div>
       </form>
-      <div>
-      <a class="modal-login-link" href="#">Забыли пароль?</a>
-      <a class="modal-login-link" href="#">Новая регистрация</a>
-    </div>
     </section>
     <section class="modal modal-basket">
-      <table class="modal basket">
+      <table class="basket">
         <tr class="visually-hidden">
           <th>Название</th>
           <th>Вес</th>
           <th>Цена за кг</th>
           <th>Стоимость</th>
         </tr>
-        <tr>
+        <tr class="basket-line">
           <td>Пломбир с апельсиновым джемом</td>
           <td>1,5 кг</td>
           <td>200 руб.</td>
           <td>300 руб.</td>
         </tr>
+        <tr class="basket-line">
           <td>Клубничный пломбир с присыпкой из белого шоколада</td>
           <td>1,5 кг</td>
           <td>300 руб.</td>
           <td>450 руб.</td>
         </tr>
-          <td colspan="4">Итого: 750 руб.</td>
+        <tr class="total">
+          <td class="total-label" colspan="2">Итого:</td>
+          <td class="total-sum" colspan="2"> 750 руб.</td>
         </tr>
       </table>
-      <a class="button" href="#">Оформить заказ</button>
+      <a class="button" href="#">Оформить заказ</a>
     </section>
   </main>
 </body>
