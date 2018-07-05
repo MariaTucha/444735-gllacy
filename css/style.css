@@ -9,8 +9,9 @@ body {
 	line-height: 18px;
 
 	color: #ffffff;
-
 	background-color: #849d8f;
+
+	/*background-color: #849d8f;*/
 }
 
 .site-cover {
@@ -42,30 +43,7 @@ a {
 	text-decoration: none;
 }
 
-/* ВСЕ ССЫЛКИ */
 
-a.red-style-link {
-	border-bottom: 1px solid rgba(255,255,255,0.2);
-	}
-
-a.red-style-link:hover,
-a.red-style-link:focus,
-a.red-style-link:active {
-	color: #ffbc9e;
-	border-bottom: 1px solid #ffbc9e;
-}
-
-a.from-blog:hover,
-a.from-blog:focus {
-	color: #e84d37;
-	font-weight: normal;
-	text-decoration-style: solid;
-}
-
-a.from-blog:active {
-	color: #e84d37;
-	font-weight: bold;
-}
 
 
 
@@ -350,22 +328,25 @@ ul.user-navigation {
 
 	margin: 0;
 
-	width: 340px;
+	width: 330px;
 
 	background-color: #ffffff;
 	border-radius: 5px;
 }
 
 .search-form input[type="search"] {
-	margin: 15px;
-	padding: 15px 20px;
 	box-sizing: border-box;
+	width: 310px;
+	margin: 15px;
+	padding: 30px;
+	
 	font-size: 14px;
 	line-height: 18px;
 	
-	width: 310px;
+	
 	text-align: left;
 	vertical-align: middle;
+	font-family: inherit;
 	color: #999999;
 	cursor: pointer;
 }
@@ -376,7 +357,28 @@ ul.user-navigation {
 	width: 340px;
 }
 
-.user-navigation .login-link a{
+/* Личный кабинет */
+
+.login-form {
+	display: none;
+	position: absolute;
+	z-index: 3;
+}
+
+.login-link:hover .login-form,
+.login-link:active .login-form {
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 50px;
+	z-index: 20;
+}
+
+.user-navigation .login-link {
+	position: relative;
+}
+
+.user-navigation .navigation-link-login {
 	position: relative;
 	display: inline-block;
 	max-width: 100px;
@@ -390,7 +392,7 @@ ul.user-navigation {
 	text-align: right;
 }
 
-.login-link a::before {
+.navigation-link-login::before {
 	position: absolute;
 	content: "";
 	display: inline-block;
@@ -416,7 +418,73 @@ ul.user-navigation {
 	background-image: url("../img/entrance.svg");
 	background-repeat: no-repeat;
 }
+.modal-login {
 
+	width: 280px;
+	max-height: 215px;
+	margin-left: 20px;
+}
+
+.modal-login-form {
+	
+	display: flex;
+	flex-direction: column;
+	vertical-align: stretch;
+	flex-wrap: wrap;
+	width: 280px;
+	padding: 10px;
+	/* временно для сетки */
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	background-color: #f8f7f4;
+	border-radius: 5px;
+}
+
+.modal-login-form div {
+	margin-bottom: 20px;
+	width: 240px;
+	height: 40px;
+}
+
+.modal-login-form .login-cover {
+	display: flex;
+	justify-content: stretch;
+}
+
+.modal-login-form .modal-cover {
+	display: flex;
+	flex-direction: column;
+}
+
+button.modal-login {
+	padding: 10px;
+	font-size: 20px;
+	color: #ffffff;
+	margin-right: 15px;
+	margin-left: auto;
+}
+
+.modal-login-form input[type="text"],
+.modal-login-form input[type="password"] {
+	font: inherit;
+	font-size: 14px;
+	line-height: 16px;
+	color: #323232;
+
+	box-sizing: border-box;
+	width: 240px;
+	padding: 10px;
+
+	border-style: none;
+	border: 1px solid #d3d3d2;
+
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+/* КОРЗИНА */
 
 .basket a{
 	display: inline-block;
@@ -511,13 +579,16 @@ ul.user-navigation {
 /* слайдер мороженки */
 
 .site-wrapper {
-	width: 1200px;
+	width: 100%;
 	margin: 0 auto;
+	display: block;
+	position: relative;
 
 	background-color: #849d8f;
 	background-image: url("../img/slide-1-white-stripes.png");
 	background-repeat: no-repeat;
-	background-position: 0 center;
+	background-position: top center;
+
 	transition: 
 		background-image 0.5s ease,
 		background-color 0.5s ease;
@@ -536,12 +607,23 @@ ul.user-navigation {
 	min-height: 600px;
 
 }
+.slider-list-wrap {
+	position: relative;
+	top: 10px;
+	left: 0;
+}
 
 .slider-list {
+	position: absolute;
+	top: 0;
+	left: 0;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
 	margin: 0;
 	padding: 0;
+	min-height: 650px;
 	margin-bottom: auto;
 	list-style: none;
 	position: relative;
@@ -590,9 +672,9 @@ ul.user-navigation {
 }
 
 .slide {
-	
+	position: absolute;
 	margin-top: 10px;
-	margin-left: 0 auto;
+	margin: 0 auto;
 	display: none;
 }
 
@@ -815,6 +897,7 @@ ul.promo-list {
 	display: inline-block;
 	width: 267px;
 	text-align: center;
+	vertical-align: top;
 	font-weight: 500;
 	margin-right: 28px;
 }
@@ -916,16 +999,16 @@ p.item-price span {
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
-.gallery-item:hover ~ .item-button {
+.gallery-item:hover .item-button {
+	z-index: 5;
+}
+
+.gallery-item:hover .catalog-item-name {
 	z-index: 2;
 }
 
-.gallery-item:hover ~ .catalog-item-name {
-	z-index: 2;
-}
-
-.gallery-item:hover ~ a.catalog-item {
-	z-index: 2;
+.gallery-item:hover a.catalog-item img {
+	z-index: 5;
 	border-bottom: 2px solid white;
 }
 
@@ -1501,69 +1584,7 @@ ul.footer-links {
 	color: #999999;
 }
 
-.modal-login {
 
-	width: 280px;
-	max-height: 215px;
-	margin-left: 20px;
-}
-
-.modal-login-form {
-	display: flex;
-	flex-direction: column;
-	vertical-align: stretch;
-	flex-wrap: wrap;
-	width: 280px;
-	padding: 20px;
-	/* временно для сетки */
-	margin-top: 20px;
-	margin-bottom: 20px;
-
-	background-color: #f8f7f4;
-	border-radius: 5px;
-}
-
-.modal-login-form div {
-	margin-bottom: 20px;
-	width: 240px;
-	height: 40px;
-}
-
-.modal-login-form .login-cover {
-	display: flex;
-	justify-content: stretch;
-}
-
-.modal-login-form .modal-cover {
-	display: flex;
-	flex-direction: column;
-}
-
-button.modal-login {
-	padding: 10px;
-	font-size: 20px;
-	color: #ffffff;
-	margin-right: 15px;
-	margin-left: auto;
-}
-
-.modal-login-form input[type="text"],
-.modal-login-form input[type="password"] {
-	font: inherit;
-	font-size: 14px;
-	line-height: 16px;
-	color: #323232;
-
-	box-sizing: border-box;
-	width: 240px;
-	padding: 15px;
-
-	border-style: none;
-	border: 1px solid #d3d3d2;
-
-	border-radius: 5px;
-	cursor: pointer;
-}
 
 .modal-cover a {
 	font-size: 13px;
@@ -1594,7 +1615,7 @@ button.modal-login {
 	font-size: 14px;
 	line-height: 16px;
 	font-family: inherit;
-	font-weight: 400;
+	font-weight: normal;
 	
 	box-sizing: border-box;
 
@@ -1695,20 +1716,25 @@ input[type="text"].contact-email {
 /* ОБЩИЕ СВОЙСТВА */
 .filter-form {
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	max-width: 880px;
+	max-width: 900px;
 	min-height: 140px;
 	margin-bottom: 35px;
 	margin-left: 5px;
 }
 
-.filter-title {
+.filter-item+.filter-title {
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	display: block;
 	font-family: inherit;
 	font-size: 16px;
 	line-height: 18px;
 }
 
-.filter-form div.filter-item {
+.filter-form .filter-item {
 	margin-right: 15px;
 	margin-bottom: 5px;
 }
@@ -1743,6 +1769,7 @@ div.filter-item ul {
  {
 	border-radius: 50px;
 	background-color: #aabab0;
+	margin-right: 10px;
 }
 
 /* Сортировка */
@@ -1767,31 +1794,41 @@ div.filter-item ul {
 
 label.filter-sorting {
 	position: relative;
-	padding: 10px 25px 0 0;
+	padding: 10px 30px 0 0;
 	vertical-align: middle;
 	text-align: left;
+	font-family: inherit;
+	font-size: 16px;
+	line-height: 18px;
 }
 
 label.filter-sorting::after {
 	position: absolute;
 	content: "";
-	width: 11px;
-	height: 10px;
-	top: 13px;
+	width: 12px;
+	height: 12px;
+	top: 15px;
 	right: -15px;
-	background-image: url("../img/icon-down-dir-white.svg");
+	background-image: url("../img/icon-down-dir-1.svg");
+
 	background-repeat: no-repeat;
 	background-position: 0 0;
+	z-index: 2;
 }
 
+.sorting .sorting-container {
+	max-width: 180px;
+}
 
 .filter-item .sorting-container:hover {
 	color: #323232;
 	background-color: #9db1a5;
 }
 
-.sorting-container:hover  label.filter-sorting::after path{
-	fill: #323232;
+.sorting-container:hover .filter-sorting::after {
+	background-image: url("../img/icon-down-dir.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 /* стрелка не меняет свой цвет */
@@ -1816,8 +1853,13 @@ label.filter-sorting::after {
 }
 
 .filter-item div.container {
+	margin-right: 15px;
 	padding: 0px 15px 5px;
 }
+.filter-item div.container-range {
+	margin-right: 15px;
+	max-width: 200px;
+	}
 
 .filter-pricing .filter-title {
 	margin-bottom: 5px;
@@ -1859,9 +1901,10 @@ label.filter-sorting::after {
 .filter-form .fats {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	font-size: 14px;
-	max-width: 420px;
+	max-width: 400px;
 	margin-right: 5px;
 }
 
@@ -1908,8 +1951,17 @@ label.filter-sorting::after {
 	text-align: top;
 	border: none;
 	background-image: url("../img/radio-off.svg");
+	opacity: 0.7;
 	background-repeat: no-repeat;
 	background-position: 0 0;
+}
+
+.fats-container input[type="radio"]:hover + label::before {
+	opacity: 1;
+}
+
+.fats-container input[type="radio"]:active + label::before {
+	opacity: 0.4;
 }
 
 .fats-container input[type="radio"]:checked + label::before {
@@ -1938,7 +1990,7 @@ label.filter-sorting::after {
 .topping .topping-container {
 	display: flex;
 	flex-wrap: wrap;
-	min-width: 710px;
+	max-width: 710px;
 	margin: 0;
 	padding: 0;
 	margin-right: 15px;
@@ -1975,7 +2027,17 @@ label.filter-sorting::after {
 	height: 23px;
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
+	opacity: 0.7;
 }
+
+.topping-input:hover + label::before {
+	opacity: 1;
+}
+
+.topping-input + label::before {
+	opacity: 0.4;
+}
+
 
 /*  Не работает отступ слева у первого элемента*/
 
@@ -2162,15 +2224,26 @@ a.button+.item-button {
 	fill: #ffffff;
 }
 
+.page-before svg {
+	transform: rotate(180deg);
+}
+
 .pagination-item .disabled path {
-	opacity: 0.5;
+	opacity: 0.9;
 	fill: #9bafa4;
 }
 
 .pagination-item+.next-page {
-	
+	opacity: 1;
 	width: 0px;
 	height: 15px;
+}
+
+.pagination-list a:hover {
+	background-image: url("../img/round-layer-1.svg");
+
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 }
 
 /* КОРЗИНА всплывающее окно */
@@ -2274,9 +2347,34 @@ input[type="text"]:active {
 input[type="text"] {
 	font-family: inherit;
 	font-size: inherit;
-	padding-left: 100px;
+	padding-left: 10px;
 	box-sizing: border-box;
 	color: #323232;
+	font-weight: normal;
+}
+
+/* ВСЕ ССЫЛКИ */
+
+a.red-style-link {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	}
+
+a.red-style-link:hover,
+a.red-style-link:focus,
+a.red-style-link:active {
+	color: #ffbc9e;
+	border-bottom: 1px solid #ffbc9e;
+}
+
+a.from-blog:hover,
+a.from-blog:focus {
+	color: #e84d37;
+	font-weight: normal;
+	text-decoration-style: solid;
+}
+
+a.from-blog:active {
+	color: #e84d37;
 	font-weight: bold;
 }
 

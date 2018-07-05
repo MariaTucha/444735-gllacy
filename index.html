@@ -56,7 +56,27 @@
             </form>
            </li>
     			 <li class="navigation-item login-link">
-    				<a class="navigation-link login-link" href="login.html">Вход</a>
+    				<a class="navigation-link-login" href="login.html">Вход</a>
+            <h2 class="visually-hidden">Личный кабинет</h2>
+            <div class="login-form">
+              <form class="modal modal-login-form">
+                <div>
+                  <label class="visually-hidden" for="login-icon-user">Электронная почта</label>
+                  <input type="text" name="email" placeholder="Электронная почта" id="login-icon-user">
+                </div>
+                <div>
+                  <label class="visually-hidden" for="login-icon-password">Пароль</label>
+                  <input type="password" name="password" placeholder="Пароль" id="login-icon-password">
+                </div>
+                <div class="login-cover">
+                 <button class="button modal-login" type="">Войти</button>  
+                 <div class="modal-cover">
+                   <a class="modal-login-link red-style-link" href="#">Забыли пароль?</a>
+                   <a class="modal-login-link red-style-link" href="#">Новая регистрация</a>
+                 </div>
+                </div>
+              </form>
+            </div>
     			 </li>
     			 <li class="navigation-item  basket">
     				<a class="navigation-link basket empty" href="basket.html" aria-label="Корзина">Пусто</a>
@@ -77,20 +97,22 @@
         <label for="product-2">Второй</label>
         <label for="product-3">Третий</label>
       </div>
-      <ul class="slider-list">
-        <li class="slider-item slide" id="slide-1">
-          <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
-          <a class="button big-btn" href="#">Давайте оба!</a>
-        </li>
-        <li class="slider-item slide" id="slide-2">
-          <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
-          <a class="button big-btn" href="#">Давайте оба!</a>
-        </li>
-        <li class="slider-item slide" id="slide-3">
-          <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
-          <a class="button big-btn" href="#">Давайте оба!</a>
-        </li>
-      </ul>
+      <div class="slider-list-wrap">
+        <ul class="slider-list">
+          <li class="slider-item slide" id="slide-1">
+            <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+            <a class="button big-btn" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item slide" id="slide-2">
+            <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+            <a class="button big-btn" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item slide" id="slide-3">
+            <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+            <a class="button big-btn" href="#">Давайте оба!</a>
+          </li>
+        </ul>
+      </div>
       </section>
   		<section class="promo">
   			<h2 class="visually-hidden">Спец-предложения</h2>
@@ -181,7 +203,7 @@
   			<p class="subscribe">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
   			<form class="subscribe-mail">
           <label class="visually-hidden" for="subscribe-me">Адрес электронной почты</label>
-  				<input type="text" id="subscribe-me" name="email" pattern="Электронная почта" value="Электронная почта">
+  				<input type="text" id="subscribe-me" name="email" pattern="Электронная почта" placeholder="Электронная почта">
   				<button class="button small-button subscribe-button" method="post">Отправить</button>
   			</form>	
       </div>
@@ -238,7 +260,7 @@
   		</div>
 
   		<div class="copyright">
-  			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.png" width="108" height="39"></a>
+  			<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.png" width="108" height="39"></a>
   			<p> Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" class="red-style-link copyright">HTML Academy</a> @copy; 2017</p>
   		</div>
   		
@@ -247,25 +269,6 @@
   </div>
     
   	<section class="modal modal-login">
-    	<h2 class="visually-hidden">Личный кабинет</h2>
-    	<form class="modal modal-login-form">
-        <div>
-          <label class="visually-hidden" for="login-icon-user">Электронная почта</label>
-    		  <input type="text" name="email" placeholder="Электронная почта" id="login-icon-user">
-        </div>
-        <div>
-          <label class="visually-hidden" for="login-icon-password">Пароль</label>
-    		  <input type="password" name="password" placeholder="Пароль" id="login-icon-password">
-        </div>
-        <div class="login-cover">
-    	   <button class="button modal-login" type="">Войти</button>	
-         <div class="modal-cover">
-           <a class="modal-login-link red-style-link" href="#">Забыли пароль?</a>
-           <a class="modal-login-link red-style-link" href="#">Новая регистрация</a>
-         </div>
-        </div>
-      </div>
-    	</form>
       <div class="modal modal-contact-us-form">
         <form class="contact-us">
           <h3 class="modal-title">Мы обязательно вам ответим!</h3>

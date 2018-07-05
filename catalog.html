@@ -53,7 +53,26 @@
             </form>
            </li>
            <li class="navigation-item login-link">
-            <a class="navigation-link login-link" href="login.html">Вход</a>
+            <a class="navigation-link-login" href="login.html">Вход</a>
+            <h2 class="visually-hidden">Личный кабинет</h2>
+            <div class="login-form">
+              <form class="modal modal-login-form">
+                <div>
+                  <label class="visually-hidden" for="login-icon-user">Электронная почта</label>
+                  <input type="text" name="email" placeholder="Электронная почта" id="login-icon-user">
+                </div>
+                <div>
+                  <label class="visually-hidden" for="login-icon-password">Пароль</label>
+                  <input type="password" name="password" placeholder="Пароль" id="login-icon-password">
+                </div>
+                <div class="login-cover">
+                 <button class="button modal-login" type="">Войти</button>  
+                 <div class="modal-cover">
+                   <a class="modal-login-link red-style-link" href="#">Забыли пароль?</a>
+                   <a class="modal-login-link red-style-link" href="#">Новая регистрация</a>
+                 </div>
+                </div>
+              </form>
            </li>
            <li class="navigation-item  basket">
             <a class="navigation-link basket full" href="basket.html" aria-label="Корзина">2 товара</a>
@@ -71,13 +90,13 @@
     <main class="inner-page">
     <ul class="breadcrumbs">
       <li>
-        <a href="index.html">Главная</a>
+        <a class="red-style-link" href="index.html">Главная</a>
       </li>
       <li>
-        <a href="catalog.html">Каталог</a>
+        <a class="red-style-link" href="catalog.html">Каталог</a>
       </li>
       <li>
-        <a class="breadcrumbs" href="gllacy-catalog.psd">Сливочное</a>
+        <a class="red-style-link" class="breadcrumbs" href="gllacy-catalog.psd">Сливочное</a>
       </li>
     </ul>
     <h1 class="catalog-list-title">Сливочное мороженое</h1>
@@ -90,11 +109,11 @@
               <label class="filter-sorting" for="sorting-popular" name="sorting-filter"><input class="visually-hidden sorting-input" type="radio" id="sorting-popular">
                 <span class="filter-title">По популярности</span>
               </label>
-          </div>
+            </div>
           </div>
           <div class="filter-item filter-pricing">
             <div class="filter-title">Цена: 100 - 500 руб. </div>
-            <div class="container">
+            <div class="container container-range">
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar">
@@ -109,20 +128,20 @@
             <legend class="filter-item filter-title">Жирность:</legend>
               <ul class="container fats-container">
                 <li>
-                  <input type="radio" id="fat-group" name="fat-zero" value="0" checked>
-                  <label for="fat-group"> 0% </label>
+                  <input type="radio" id="fat-zero" name="fat-group" value="0">
+                  <label for="fat-zero"> 0% </label>
                 </li>
                 <li>
-                  <input type="radio" id="fat-group" name="fat-10" value="10">
-                  <label for="fat-group">до 10%</label>
+                  <input type="radio" id="fat-10" name="fat-group" value="10">
+                  <label for="fat-10">до 10%</label>
                 </li>
                 <li>
-                  <input type="radio" id="fat-group" name="fat-30" value="30">
-                  <label for="fat-group">до 30%</label>
+                  <input type="radio" id="fat-30" name="fat-group" value="30">
+                  <label for="fat-30">до 30%</label>
                 </li>
                 <li>
-                  <input type="radio" id="fat-group" name="fat-zero" value="over-30">
-                  <label for="fat-group">выше 30%</label>
+                  <input type="radio" id="fat-over-30" name="fat-group" value="over-30">
+                  <label for="fat-over-30">выше 30%</label>
                 </li>
               </ul>
           </div>
@@ -286,7 +305,7 @@
       <div class="pagination">
         <ul class="pagination-list">
           <li class="pagination-item"> 
-            <a class="page-before " alt="Кнопка предыдущей страницы"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <a class="page-before disabled" alt="Кнопка предыдущей страницы"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
    width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
 <path fill="#C1C6CE" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
   c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
