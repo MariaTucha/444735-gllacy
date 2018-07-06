@@ -106,18 +106,23 @@ a {
 	display: inline-block;
 	width: 154px;
 	height: 64px;
-	top: 2px;
+	top: 3px;
+	left: 3px;
 	margin-right: 10px;
-	margin-left: 14px;
+
 }
 
 nav.main-navigation {
 	position: relative;
 	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-left: 150px;
-	margin-top: 3px;
+	min-width: 400px;
+	max-width: 1200px;
+
+	margin-left: 134px;
+	margin-top: 2px;
 	background-color: transparent;
 }
 
@@ -142,9 +147,10 @@ ul.site-navigation {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	width: 380px;
+	min-width: 700px;
 	margin-left: 39px;
 	margin-top: 22px;
+	margin-right: 25px;
 }
 
 .site-navigation a.site-navigation {
@@ -155,7 +161,9 @@ ul.site-navigation {
 }
 
 ul.site-navigation li {
-	margin-right: 4px;
+	margin: 0;
+	padding: 0;
+	margin-right: 0px;
 }
 
 ul.site-navigation li:last-child {
@@ -258,28 +266,29 @@ ul.site-navigation li:last-child {
 
 .main-header-container {
 	display: inline-block;
+	margin-right: auto;
 }
 
 ul.user-navigation {
 	display: flex; 
 	flex-wrap: wrap;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: center;
-	width: 325px;
+	max-width: 320px;
 
 	vertical-align: baseline;
 
 	padding: 0;
 	margin: 0;
 	margin-top: 18px;
-	margin-right: 26px;
+	margin-right: 0px;
 	margin-bottom: 0px;
 }
 
 /* Кнопки общие черты*/
 
 .user-navigation .navigation-item {
-	background-color: #a1b4a9;
+	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 20px;
 	margin-left: 11px;
 	height: 33px;
@@ -287,7 +296,7 @@ ul.user-navigation {
 
 .user-navigation .navigation-item:hover,
 .user-navigation .navigation-item:focus {
-	background-color: #f8f7f4;
+	/*background-color: #f8f7f4;*/
 	color: #323232;
 	border-radius: 20px;
 }
@@ -300,7 +309,6 @@ ul.user-navigation {
 	display: inline-block;
 	position: relative;
 
-	background-color: #b0c0b7;
 	background-image: url(../img/loupe.svg);
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -550,6 +558,7 @@ button.modal-login {
 	font-size: 14px;
 	line-height: 16px;
 	margin-bottom: 0px;
+	margin-right: auto;
 	z-index: 0;
 }
 
@@ -560,7 +569,7 @@ button.modal-login {
 	text-align: right;
 
 	top: 58px;
-	right: 27px;
+	right: 46px;
 
 	width: 170px;
 }
@@ -611,12 +620,13 @@ button.modal-login {
 	position: relative;
 	top: 10px;
 	left: 0;
+	p
 }
 
 .slider-list {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -633,7 +643,7 @@ button.modal-login {
 	width: 1200px;
 	margin: 0 auto;
 	position: relative;
-	padding-top: 32px;
+	padding-top: 56px;
 	text-align: center;
 	color: #ffffff;
 	background-color: #849d8f;
@@ -641,14 +651,15 @@ button.modal-login {
 
 
 .slide-title {
-	width: 700px;
+	width: 715px;
 	margin: 0 auto;
-	margin-bottom: 27px;
-
+	margin-bottom: 5px;
+	text-align: center;
 	font-size: 60px;
 	line-height: 60px;
 	font-weight: bold;
 	color: #ffffff;
+	margin-left: 0px;
 }
 
 .slider-controls label {
@@ -731,7 +742,7 @@ button.modal-login {
 	max-width: 270px;
 	margin-left: 14px;
 	margin-right: 10px;
-	margin-bottom: 80px;
+	margin-bottom: 105px;
 	margin-top: 25px;
 	
 	font-size: 31px;
@@ -2240,7 +2251,7 @@ a.button+.item-button {
 }
 
 .pagination-list a:hover {
-	background-image: url("../img/round-layer-1.svg");
+	background-image: url("../img/round-layer-2.svg");
 
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
